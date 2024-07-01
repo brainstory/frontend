@@ -1,0 +1,8 @@
+---
+import IdeaResultContent from "@components/idea/IdeaResultContent.jsx";
+import BaseLayout from "@src/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Idea" hidePadding>
+	<IdeaResultContent client:only="react" />
+</BaseLayout>

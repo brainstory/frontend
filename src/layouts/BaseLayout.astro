@@ -1,0 +1,41 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Navigation from "@components/global/Navigation.jsx";
+import VerifyEmailEyebrow from "@components/global/VerifyEmailEyebrow.jsx";
+import Footer from "@components/global/Footer.astro";
+
+const { title, hidePadding, showFooter } = Astro.props;
+
+// 6rem (desktop) = 4 (footer) + 2 (top and bottom padding are 1rem)
+// 8rem (mobile)  = 4 (footer) + 3 (hamburger menu) + 1 (only bottom padding)
+const mainSectionStyle = `min-h-[calc(100vh-8rem)] sm:min-h-[calc(100vh-6rem)] bg-white shadow rounded-lg ${hidePadding ? "" : "p-4"}` 
+---
+
+<html
+	lang="en"
+	class="scroll-smooth selection:bg-pink-100 selection:text-black no-touchevents hydrated"
+>
+	<head>
+		<BaseHead title={title} />
+		<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+	</head>
+
+	<body
+		class="bg-stone-50 [&_:focus-visible]:ring-4 [&_:focus-visible]:outline-none [&_:focus-visible]:ring-pink-300"
+	>
+		<VerifyEmailEyebrow client:idle />
+		<div class="sm:flex">
+			<Navigation client:idle />
+			<div class="flex flex-col flex-grow">
+				<main class="p-4 pt-0 sm:pt-4">
+					<div
+						class:list={mainSectionStyle}
+					>
+						<slot />
+					</div>
+				</main>
+			</div>
+		</div>
+		{showFooter && <Footer hasSideNavbar/>}
+	</body>
+</html>

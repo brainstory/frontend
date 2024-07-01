@@ -1,0 +1,12 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import ErrorSection from "@src/components/error/ErrorSection";
+---
+
+<BaseLayout title="I'm lost!" showFooter>
+	<ErrorSection
+		client:only
+		title="You seem lost!"
+		paragraphs={["We're not sure how you got here!"]}
+	/>
+</BaseLayout>

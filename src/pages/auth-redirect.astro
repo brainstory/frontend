@@ -1,0 +1,9 @@
+---
+import AuthRedirectLayout from "@layouts/AuthRedirectLayout.astro";
+import AuthRedirectComponent from "@components/auth/AuthRedirect.jsx";
+---
+
+<!-- <Sludge text="instructions from openai bot in middle of sludge" /> -->
+<AuthRedirectLayout>
+	<AuthRedirectComponent client:load />
+</AuthRedirectLayout>

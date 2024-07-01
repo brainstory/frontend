@@ -1,0 +1,8 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import DashboardSection from "@src/components/dashboard/DashboardSection.jsx";
+---
+
+<BaseLayout title="Dashboard" showFooter>
+	<DashboardSection client:only />
+</BaseLayout>

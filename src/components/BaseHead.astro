@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+
+const { title, metaImage } = Astro.props;
+const metaImageLink = metaImage ? metaImage : "https://app.brainstory.ai/og.png"
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="Brainstory" />
+<meta name="keywords" content="brainstorm ai" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff54a0" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="theme-color" content="#ffffff" />
+
+<meta property="og:title" content="Brainstory" />
+<meta property="og:url" content="https://brainstory.ai/" />
+<meta property="og:description" content="Find your moments of brilliance without the slump" />
+<meta property="og:site_name" content="Brainstory" />
+<meta property="og:image" content={metaImageLink} />
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:title" content="Brainstory">
+<meta name="twitter:description" content="Find your moments of brilliance without the slump">
+<meta name="twitter:image:src" content={metaImageLink}>
+<meta name="twitter:card" content="summary_large_image">
+
+<!--Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+<link rel="preconnect" href="https://rsms.me/" />
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+<!---- Alpine  -->
+<script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+<!-- Analytics   -->
+
+<title>{title && `${title} | `} Brainstory</title>
+
+<script>
+(function(apiKey){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+    v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+			pendo.initialize({
+				visitor: {
+					id: 'VISITOR-UNIQUE-ID',
+					full_name: 'VISITOR-UNIQUE-NAME',
+				}
+			});
+})('cb209c8f-9b35-4291-5732-58a8b01a3085');
+</script>

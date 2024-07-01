@@ -1,0 +1,13 @@
+---
+import HelpButton from "@components/global/HelpButton";
+
+const { hasSideNavbar } = Astro.props;
+---
+
+<footer class={`flex place-content-between pt-0 p-4 text-stone-400 text-sm ${hasSideNavbar && "sm:ml-64"}`}>
+	<div>	
+		<p>© 2024 Brainstory. All rights reserved.</p>
+		<a href="/terms">Terms</a> • <a href="/privacy">Privacy</a>
+	</div>
+	<HelpButton client:load/>
+</footer>

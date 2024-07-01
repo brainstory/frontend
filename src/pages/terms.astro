@@ -1,0 +1,11 @@
+---
+import AuthRedirectLayout from "@layouts/AuthRedirectLayout.astro";
+import TermsComponent from "@components/auth/Terms.jsx";
+import * as terms from "@components/Terms.md";
+
+let termsContent = terms.rawContent();
+---
+
+<AuthRedirectLayout title="Terms & Conditions">
+	<TermsComponent tc={termsContent} />
+</AuthRedirectLayout>

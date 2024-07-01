@@ -1,0 +1,26 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import GuestNavigation from "@components/global/GuestNavigation";
+import Footer from "@components/global/Footer.astro";
+
+const { title } = Astro.props;
+---
+
+<html
+	lang="en"
+	class="scroll-smooth selection:bg-pink-100 selection:text-black no-touchevents hydrated"
+>
+	<head>
+		<BaseHead title={title} metaImage="https://app.brainstory.ai/youvegotmail.png" />
+	</head>
+
+	<body class="bg-stone-50">
+		<GuestNavigation client:load />
+		<main class="p-4">
+			<div class="bg-white p-4 shadow rounded-lg">
+				<slot />
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
