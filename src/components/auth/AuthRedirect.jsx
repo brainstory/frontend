@@ -19,13 +19,6 @@ export default function AuthRedirect() {
 
 				getUserApi()
 					.then((res) => {
-						pendo.identify({
-							visitor: {
-								id: res.email,
-								full_name: res.name
-							}
-						});
-
 						// route if user is authenticated
 						if (getCookie("auth_redirect_url") !== undefined) {
 							// can't use reusable getCookie method because it splits out the query param if it exists

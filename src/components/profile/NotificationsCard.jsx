@@ -69,6 +69,8 @@ export function NotificationsCard({ notificationsData = [], saveSettings }) {
 		});
 	};
 
+	if (notificationFields.length === 0) return null;
+
 	return (
 		<Card columns={3} title="Email Notifications">
 			<div className="flex flex-col gap-4">
