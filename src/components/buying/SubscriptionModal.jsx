@@ -76,7 +76,6 @@ export default function SubscriptionModal({ isOpen, onClose, isUnlimited }) {
 							</div>
 						) : (
 							<span>Stripe has been removed</span>
-							/>
 						)}
 					</div>
 				</div>
