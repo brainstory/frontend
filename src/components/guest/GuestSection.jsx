@@ -11,7 +11,7 @@ export default function GuestSection() {
 	const [shareIdea, setShareIdea] = useState();
 	const [errorFound, setErrorFound] = useState(false);
 
-	useEffect(async () => {
+	useEffect(() => {
 		const shareId = getQueryParam("share");
 		getShareIdeaApi(shareId)
 			.then((shareData) => {

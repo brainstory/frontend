@@ -43,13 +43,14 @@ function RecordButton({
 		setReadyToSend(conversationState === CONVERSATION_STATE.ReadyToSendUserTranscript);
 	}, [conversationState]);
 
-	useEffect(async () => {
+	useEffect(() => {
 		if (readyToSend === true) {
 			resetTimer();
-			await getCoachResponse();
-			setReadyToSend(false);
-			// clear any possible user text input
-			setUserTextInput("");
+			getCoachResponse().then(() => {
+				setReadyToSend(false);
+				// clear any possible user text input
+				setUserTextInput("");
+			});
 		}
 	}, [readyToSend]);
 
