@@ -1,7 +1,84 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* CSS */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@theme {
+	--font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+	--color-black: #2b2723;
+	--color-orange: #e49671;
+	--color-accent-50: #f3bb9e;
+	--color-accent-100: #e49671;
+	--color-accent-200: #d4b38f;
+	--color-accent-300: #cdaa84;
+	--color-accent-400: #786b5b;
+	--color-accent-500: #675b4e;
+	--color-accent-600: #564c41;
+	--color-accent-700: #ffcbe2;
+	--color-accent-800: #ffa0ca;
+	--color-accent-900: #ff54a0;
+
+	--text-xs: 0.75rem;
+	--text-xs--line-height: 1rem;
+	--text-sm: 0.875rem;
+	--text-sm--line-height: 1.5rem;
+	--text-base: 1rem;
+	--text-base--line-height: 1.75rem;
+	--text-lg: 1.125rem;
+	--text-lg--line-height: 2rem;
+	--text-xl: 1.25rem;
+	--text-xl--line-height: 2rem;
+	--text-2xl: 1.5rem;
+	--text-2xl--line-height: 2rem;
+	--text-3xl: 2rem;
+	--text-3xl--line-height: 2.5rem;
+	--text-4xl: 2.5rem;
+	--text-4xl--line-height: 3.5rem;
+	--text-5xl: 3rem;
+	--text-5xl--line-height: 3.5rem;
+	--text-6xl: 3.75rem;
+	--text-6xl--line-height: 1;
+	--text-7xl: 4.5rem;
+	--text-7xl--line-height: 1.1;
+	--text-8xl: 6rem;
+	--text-8xl--line-height: 1;
+	--text-9xl: 8rem;
+	--text-9xl--line-height: 1;
+
+	--animate-border: border 4s ease infinite;
+	--animate-appear: appear 600ms ease-in 0ms forwards;
+	--animate-appear0: appear 1s ease-in 0ms forwards;
+	--animate-appear1: appear 1s ease-in 400ms forwards;
+	--animate-appear2: appear 1s ease-in 1000ms forwards;
+	--animate-appear3: appear 1s ease-in 1500ms forwards;
+	--animate-appear4: appear 1s ease-in 1600ms forwards;
+	--animate-appear5: appear 1s ease-in 2000ms forwards;
+	--animate-appear6: appear 1s ease-in 2400ms forwards;
+
+	--z-1: 1;
+	--z-2: 2;
+
+	@keyframes border {
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+	}
+
+	@keyframes appear {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
 :root {
 	font-family: "Inter", sans-serif;
 }

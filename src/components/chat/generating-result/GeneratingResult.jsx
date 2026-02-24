@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 export default function GeneratingResult({ summary }) {
 	return (
 		<div className="mx-auto w-full items-center scroll-mt-6 lg:px-24 max-w-7xl p-5 md:p-12">
-			<div className="space-y-12 divide-y-2">
+			<div className="space-y-12 divide-y-2 divide-stone-200">
 				<div className="flex flex-col flex-shrink-0 max-w-[100%]">
 					<span
 						className={

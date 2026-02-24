@@ -31,10 +31,10 @@ export default function DailyStreakSection() {
 		}
 
 		return (
-			<div className="text-start text-sm sm:text-base">
-				<p className="font-semibold tracking-wide">{textEmphasis}</p>
+			<div className="text-start text-sm sm:text-base text-stone-700">
+				<p className="font-semibold tracking-wide text-stone-900">{textEmphasis}</p>
 				{text}
-				<a className="text-blue-700 hover:underline" href={link}>
+				<a className="text-accent-900 font-medium hover:underline" href={link}>
 					here
 				</a>
 			</div>
