@@ -4,7 +4,6 @@ import TimezoneSelect from "react-timezone-select";
 import { resetPasswordApi } from "@helpers/api/auth.js";
 import { getGravatarUrl } from "@helpers/helpers";
 
-import SubscriptionModal from "@components/buying/SubscriptionModal";
 import AddProfilePictureModal from "@components/profile/AddProfilePictureModal";
 
 import BorderedButton from "@ds/BorderedButton";
@@ -38,15 +37,6 @@ export function Card({ children, title, subtitle, columns = 1, classes = "" }) {
 export function PhotoNameCard({ userName, userEmail, createdAt, openSnackbar }) {
 	const [isResetPasswordLoading, setResetPasswordLoading] = useState(false);
 	const [isAddProfilePicModalOpen, setIsAddProfilePicModalOpen] = useState(false);
-	const [isSubscriptionModalOpen, setSubscriptionModalOpen] = useState(false);
-
-	const manageSubscription = () => {
-		setSubscriptionModalOpen(true);
-	};
-
-	const closeSubscriptionModal = () => {
-		setSubscriptionModalOpen(false);
-	};
 
 	const handleResetPassword = async () => {
 		setResetPasswordLoading(true);
@@ -98,7 +88,6 @@ export function PhotoNameCard({ userName, userEmail, createdAt, openSnackbar }) 
 				isOpen={isAddProfilePicModalOpen}
 				onClose={() => setIsAddProfilePicModalOpen(false)}
 			/>
-			<SubscriptionModal isOpen={isSubscriptionModalOpen} onClose={closeSubscriptionModal} />
 		</Card>
 	);
 }
