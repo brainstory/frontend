@@ -69,23 +69,13 @@ export default function SubscriptionModal({ isOpen, onClose, isUnlimited }) {
 									<PinkButton
 										id="checkout-and-portal-button"
 										type="submit"
-										// className="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold px-4 py-2 rounded-full"
 									>
 										Change your subscription
 									</PinkButton>
 								</form>
 							</div>
 						) : (
-							<stripe-pricing-table
-								pricing-table-id={
-									PUBLIC_STRIPE_ENV === "test"
-										? STRIPE_TABLE_ID_TEST
-										: STRIPE_TABLE_ID_PROD
-								}
-								publishable-key={
-									PUBLIC_STRIPE_ENV === "test" ? STRIPE_KEY_TEST : STRIPE_KEY_PROD
-								}
-								customer-email={userEmail}
+							<span>Stripe has been removed</span>
 							/>
 						)}
 					</div>
