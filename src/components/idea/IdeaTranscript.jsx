@@ -16,10 +16,10 @@ export default function IdeaTranscript({ transcript }) {
 	const { assistantContent, userContent } = splitConversation(transcript);
 
 	return (
-		<div className="mx-10 space-y-12 divide-y-2">
+		<div className="mx-10 divide-y-2 divide-stone-200">
 			{assistantContent.map((question, index) => (
 				<div
-					className="grid grid-cols-1 gap-4 pt-4 lg:grid-cols-3 lg:pt-12 first:pt-2 last:pb-12"
+					className="grid grid-cols-1 gap-4 py-6 lg:grid-cols-3 lg:py-12 first:pt-2"
 					key={`transcript-${index}`}
 				>
 					<div className="flex flex-col flex-shrink-0 mb-6 lg:pr-12 md:mb-0">

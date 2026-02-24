@@ -13,7 +13,7 @@ export default function FeedbackGrid() {
 	}, []);
 
 	return (
-		<div className="mb-6 rounded-lg bg-pink-100 mx-auto">
+		<div className="mb-6 rounded-lg bg-pink-100 selection:bg-pink-300 selection:text-white mx-auto">
 			<DailyStreakSection />
 			{notifications.length > 0 && (
 				<div className="bg-stone-100 p-5 rounded-b-lg grid">

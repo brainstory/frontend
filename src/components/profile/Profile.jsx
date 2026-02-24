@@ -115,7 +115,7 @@ export default function Profile() {
 		{
 			label: "General",
 			content: (
-				<div className="grid grid-cols-3 gap-4 divide-y">
+				<div className="grid grid-cols-3 gap-4 divide-y divide-stone-200">
 					<PhotoNameCard
 						userEmail={userEmail}
 						userName={userName}

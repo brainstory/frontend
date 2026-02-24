@@ -49,10 +49,10 @@ function TailwindTab({ children, isDisabled, tooltipText = "", ...rest }) {
 			<li
 				className={`cursor-pointer text-sm font-medium bg-white p-3 border-b-4 ${
 					isDisabled
-						? "disabled opacity-50 cursor-not-allowed hover:unset"
+						? "disabled border-stone-200 opacity-50 cursor-not-allowed hover:unset"
 						: isActive
 						? `active border-pink-300`
-						: "hover:text-pink-600 hover:border-accent-900"
+						: "border-stone-200 hover:text-pink-600 hover:border-accent-900"
 				}`}
 				onClick={isDisabled ? undefined : () => setActiveIndex(index)}
 				key={index + "tab"}
