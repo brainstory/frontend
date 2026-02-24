@@ -30,11 +30,6 @@ export default function IdeaLimitPaywall({}) {
 					<p className="font-light lg:text-xl text-xl text-center mt-1">
 						Subscribe to continue your train of thought
 					</p>
-					<stripe-pricing-table
-						pricing-table-id="prctbl_1ODZoTLQfRCgE8KWN5aWqyai"
-						publishable-key="pk_live_51IUHPSLQfRCgE8KW6biE38hBuwThPGgA3QN3A5pzubCOoJFUsa75SsoTnFOTkopAlsR0efoJMbxK7yiq8ymZDHEj00LbLEnT9e"
-						customer-email={userEmail}
-					/>
 				</div>
 			)}
 		</>
