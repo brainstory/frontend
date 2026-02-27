@@ -6,8 +6,8 @@ import DailyStreakSection from "./DailyStreakSection.jsx";
 export default function FeedbackGrid() {
 	let [notifications, setNotifications] = useState([]);
 
-	useEffect(async () => {
-		await getAllUserNotifications().then((res) => {
+	useEffect(() => {
+		getAllUserNotifications().then((res) => {
 			setNotifications(res);
 		});
 	}, []);
@@ -26,10 +26,10 @@ export default function FeedbackGrid() {
 								.slice()
 								// sort notifications by most recent
 								.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-								.map((notification, index) => (
+								.map((notification) => (
 									<FeedbackNotificationCard
 										notification={notification}
-										key={index}
+										key={notification.id}
 									/>
 								))}
 						</div>

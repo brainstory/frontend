@@ -9,16 +9,16 @@ let baseUrl = import.meta.env.PUBLIC_API_URL;
 export default function AuthRedirect() {
 	const [snackbarErrorOpen, setSnackbarErrorOpen] = useState(false);
 
-	useEffect(async () => {
+	useEffect(() => {
 		// Get CSRF token, then status of user, then workspace details from apis
-		await csrfApi()
-			.then(async (res) => {
+		csrfApi()
+			.then((res) => {
 				localStorage.setItem("csrf_verify", res.csrf);
 				localStorage.setItem("csrf_header", res.header);
 				const baseURL = window.location.origin;
 
-				await getUserApi()
-					.then(async (res) => {
+				getUserApi()
+					.then((res) => {
 						// route if user is authenticated
 						if (getCookie("auth_redirect_url") !== undefined) {
 							// can't use reusable getCookie method because it splits out the query param if it exists
